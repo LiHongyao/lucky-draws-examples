@@ -2,7 +2,7 @@
  * @Author: Lee
  * @Date: 2023-01-11 11:40:57
  * @LastEditors: Lee
- * @LastEditTime: 2023-01-11 17:01:03
+ * @LastEditTime: 2023-01-11 19:05:42
  * @Description: 
 -->
 
@@ -102,11 +102,13 @@ const getData = () => {
 
 // -- events
 const onOpenBox = () => {
+
   if (!state.data || !state.luckyDrawData || state.isAnimating) return;
   if (state.balance < state.data.price) {
     ElMessage.info('余额不足');
     return;
   }
+  state.luckyDrawResultsVisible = false;
   state.balance = new Big(state.balance).minus(state.data.price).parse();
   state.isAnimating = true;
   // -- 模拟ajax请求，获取中奖物品
