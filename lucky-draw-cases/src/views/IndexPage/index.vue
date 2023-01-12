@@ -2,7 +2,7 @@
  * @Author: Lee
  * @Date: 2023-01-11 11:40:43
  * @LastEditors: Lee
- * @LastEditTime: 2023-01-11 17:41:35
+ * @LastEditTime: 2023-01-12 09:49:29
  * @Description: 
 -->
 
@@ -19,7 +19,7 @@ import { RouterLink } from 'vue-router';
       </div>
       <nav>
         <RouterLink to="/scrolls">01.scroll-anis</RouterLink>
-        <RouterLink to="/turntable">02.turntables</RouterLink>
+        <RouterLink to="/turntable">02.turntable</RouterLink>
       </nav>
     </div>
   </div>

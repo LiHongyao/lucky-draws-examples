@@ -2,7 +2,7 @@
  * @Author: Lee
  * @Date: 2023-01-11 11:40:57
  * @LastEditors: Lee
- * @LastEditTime: 2023-01-11 19:05:42
+ * @LastEditTime: 2023-01-12 10:30:20
  * @Description: 
 -->
 
@@ -10,7 +10,7 @@
 // -- imports
 import { reactive, onMounted, ref } from 'vue';
 import json from './data.json';
-import LuckyDraw from './LuckyDraw';
+import LuckyDraw from '@/utils/LuckyDraw';
 import PageBack from '@/components/PageBack/index.vue';
 import Big from 'lg-big';
 import { ElMessage } from 'element-plus';
@@ -102,7 +102,6 @@ const getData = () => {
 
 // -- events
 const onOpenBox = () => {
-
   if (!state.data || !state.luckyDrawData || state.isAnimating) return;
   if (state.balance < state.data.price) {
     ElMessage.info('余额不足');
