@@ -2,7 +2,7 @@
  * @Author: Lee
  * @Date: 2023-01-11 11:35:52
  * @LastEditors: Lee
- * @LastEditTime: 2023-01-11 11:42:44
+ * @LastEditTime: 2023-01-12 13:38:43
  * @Description:
  */
 import { createRouter, createWebHistory } from 'vue-router';
@@ -37,6 +37,14 @@ const router = createRouter({
       component: () => import('@/views/Turntable/index.vue'),
       meta: {
         title: 'turntable',
+      },
+    },
+    {
+      path: '/lattice',
+      name: 'Lattice',
+      component: () => import('@/views/Lattice/index.vue'),
+      meta: {
+        title: 'lattice',
       },
     },
   ],

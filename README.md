@@ -181,6 +181,55 @@ static getLuckyDrawDataList<T>(configs: {
    - 我们只需要设置转盘的 `transition` + `transform:rotateZ` 属性即可实现旋转效果
    - 每次旋转之前需要复位转盘
 
+## 九宫格
+
+### 案例效果
+
+九宫格效果在日常开发中也比较常见，直接看效果吧：
+
+![](./IMGs/lattice.gif)
+
+> 视图目录：*`src/view/Lattice`*
+
+### 核心思路
+
+#### 1. 布局基本结构
+
+```html
+<div class="lattice">
+  <!-- 抽奖背景 -->
+  <img width="300" src="./images/lattice_bg.png" />
+  <!-- 外层容器 -->
+  <div class="lattice-wrap">
+    <div class="lattice-item"><img src="./images/goods_1.png" /></div>
+    <div class="lattice-item"><img src="./images/goods_2.png" /></div>
+    <div class="lattice-item"><img src="./images/goods_3.png" /></div>
+    <div class="lattice-item"><img src="./images/goods_4.png" /></div>
+    <div class="lattice-item"><img src="./images/goods_5.png" /></div>
+    <div class="lattice-item"><img src="./images/goods_6.png" /></div>
+    <div class="lattice-item"><img src="./images/goods_7.png" /></div>
+    <div class="lattice-item"><img src="./images/goods_8.png" /></div>
+  </div>
+  <!-- 抽奖按钮 -->
+  <img class="start-button" src="./images/lattice_btn.png" @click="onLattice" />
+</div>
+```
+
+> **！提示：** 背景、抽奖按钮以及奖品的设计由UI出图。
+
+正常布局中，元素是从上往下，从左往右依次布局的，为了让抽奖效果可以以顺时针/逆时针转动的形式呈现，布局时你需要用 **绝对定居** 布局每一个元素的位置（*当然，你也可以正常布局，然后在 JS 中处理也*），如下图所示：
+
+![](./IMGs/lattice_layouts.png)
+
+#### 2. 轮询效果
+
+九宫格抽奖和前面的大转盘以及滚动抽奖的实现有所区别，大转盘和滚动抽奖我们可以通过 CSS 实现，并且可以很方便通过 `transition` 控制其动画曲线以及持续时间，而九宫格抽奖，我们是通过依次 **高亮** 抽奖元素的形式实现。
+
+- 抽奖的高亮色块轮循，使用一个 class 去控制。
+- 通过延时函数 `setTimeout`  控制轮询速度。
+- 正在抽奖轮循的时候，开始按钮是不能点击的。所以要用一个变量判断当前是否正在轮循。
+- 每次高亮当前元素时，清除上一次高亮的元素。
+
 # 抽奖工具类
 
 ```typescript

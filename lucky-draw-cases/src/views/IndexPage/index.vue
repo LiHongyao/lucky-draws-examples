@@ -2,7 +2,7 @@
  * @Author: Lee
  * @Date: 2023-01-11 11:40:43
  * @LastEditors: Lee
- * @LastEditTime: 2023-01-12 09:49:29
+ * @LastEditTime: 2023-01-12 13:39:01
  * @Description: 
 -->
 
@@ -18,8 +18,9 @@ import { RouterLink } from 'vue-router';
         <p>点击下方链接可查看示例，如果您觉得不错，欢迎 Star ~</p>
       </div>
       <nav>
-        <RouterLink to="/scrolls">01.scroll-anis</RouterLink>
-        <RouterLink to="/turntable">02.turntable</RouterLink>
+        <RouterLink to="/scrolls">01.滚动抽奖</RouterLink>
+        <RouterLink to="/turntable">02.大转盘</RouterLink>
+        <RouterLink to="/lattice">03.九宫格</RouterLink>
       </nav>
     </div>
   </div>
