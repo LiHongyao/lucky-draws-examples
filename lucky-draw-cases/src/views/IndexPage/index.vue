@@ -2,7 +2,7 @@
  * @Author: Lee
  * @Date: 2023-01-11 11:40:43
  * @LastEditors: Lee
- * @LastEditTime: 2023-01-12 13:39:01
+ * @LastEditTime: 2023-01-13 11:40:53
  * @Description: 
 -->
 
@@ -15,7 +15,26 @@ import { RouterLink } from 'vue-router';
     <div class="wrapper">
       <div class="tips">
         <div class="title">抽奖代码示例</div>
-        <p>点击下方链接可查看示例，如果您觉得不错，欢迎 Star ~</p>
+        <p>
+          点击下方链接可查看示例，如果您觉得不错，欢迎在
+          <a
+            target="_blank"
+            href="https://gitee.com/lihongyao/lucky-draws-examples"
+            >Gitee</a
+          >
+          /
+          <a
+            target="_blank"
+            href="https://github.com/lihongyao/lucky-draws-examples"
+            >Github</a
+          >
+          /
+          <a target="_blank" href="https://juejin.cn/post/7187976478468866104"
+            >Github</a
+          >
+
+          点赞关注一波~
+        </p>
       </div>
       <nav>
         <RouterLink to="/scrolls">01.滚动抽奖</RouterLink>
@@ -47,6 +66,7 @@ import { RouterLink } from 'vue-router';
   justify-content: center;
   align-items: center;
 }
+
 .logo {
   margin-right: 20px;
   border-radius: 20px;
@@ -59,7 +79,7 @@ a,
 }
 
 .tips {
-  max-width: 300px;
+  max-width: 340px;
   margin-bottom: 12px;
   .title {
     font-size: 18px;

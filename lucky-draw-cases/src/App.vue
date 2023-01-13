@@ -2,7 +2,7 @@
  * @Author: Lee
  * @Date: 2023-01-11 11:35:52
  * @LastEditors: Lee
- * @LastEditTime: 2023-01-11 14:55:09
+ * @LastEditTime: 2023-01-13 11:51:08
  * @Description: 
 -->
 
@@ -14,6 +14,10 @@
 @font-face {
   font-family: 'DIN-Bold';
   src: url('/fonts/din-bold.otf');
+}
+
+body {
+  min-width: 1450px;
 }
 
 /* 字体名称 */

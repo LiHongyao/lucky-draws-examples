@@ -2,7 +2,7 @@
  * @Author: Lee
  * @Date: 2023-01-11 11:40:57
  * @LastEditors: Lee
- * @LastEditTime: 2023-01-12 10:30:20
+ * @LastEditTime: 2023-01-13 11:43:20
  * @Description: 
 -->
 
@@ -117,7 +117,7 @@ const onOpenBox = () => {
   state.luckyDrawResults = openResults;
   // -- 执行动画
   LuckyDraw.draw({
-    winningID: 17761,
+    winningID: openResults.productId,
     winningIDs: state.luckyDrawData.map((item) => item.productId),
     wrap: luckyDrawWrapRef.value,
     itemWidth: state.itemWidth,
